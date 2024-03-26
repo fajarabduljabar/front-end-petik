@@ -2,4 +2,6 @@
     display: flex;
     flex-wrap:wrap;
      gap:30px;
+     background-image: url(../car.webp);
+     background-size: cover;
 }
