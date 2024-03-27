@@ -13,7 +13,7 @@ const Car = (props) => {
       {/* kalau tipe datany array maka pake s 
         map untuk menambahkan spasi */}
       {/* <h5>Varian warna : {colors.map((color) => color + " ,")}</h5> */}
-      <button onClick={beli}>Beli</button>
+      <button onClick={beli}><a href="">Beli</a></button>
     </div>
   );
 };

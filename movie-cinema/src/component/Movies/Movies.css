@@ -1,0 +1,18 @@
+.movies-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+/* Medium Screen */
+@media (min-width: 768px) {
+    .movies-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (main-width: 992px) {
+    .movies-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

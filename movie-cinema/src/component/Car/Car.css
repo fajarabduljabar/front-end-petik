@@ -11,3 +11,12 @@
     margin-bottom: 10px;
     font-weight: bold;
 }
+
+.card button a {
+    text-decoration: none;
+    color: black;
+}
+
+.card button a:hover {
+    color: #fff;
+}
