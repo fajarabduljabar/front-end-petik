@@ -89,6 +89,7 @@ const Main = () => {
           message={() => alert(data.message)}
         />
       ))}
+      
     </div>
   );
 };

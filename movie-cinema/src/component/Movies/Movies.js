@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Movie from "../Movie/Movie.js";
 import "./Movies.css";
-
+import Counter from "../Counter/Counter.js";
+import AddMovieForm from "../AddMovieForm/AddMovieForm.js";
 const Movies = () => {
-  const datas = [
+
+
+  const [nama, setNama] = useState("Ucup");
+
+  console.log(nama);
+
+
+  const [datas, setDatas] = useState([
     {
       title: "Judul Film 1",
       year: 2021,
@@ -52,7 +60,24 @@ const Movies = () => {
       poster: "https://picsum.photos/200",
       genre: "Romance",
     },
-  ];
+  ]);
+
+  const handleClick = () => {
+    const movie = {
+      title: "Amazing Spiderman",
+      year: 2012,
+      poster: "https://picsum.photos/200",
+      genre: "Avanger",
+    };
+    setDatas([...datas, movie]);
+    // setNama("Budi");
+  };
+
+  const addMovie = (movie) => {
+    setDatas([...datas,movie])
+  }
+
+  console.log(datas);
 
   return (
     <div>
@@ -60,10 +85,18 @@ const Movies = () => {
       <div className="movies-container">
         {datas.map((data) => {
           return (
-            <Movie title={data.title} year={data.year} poster={data.poster} genre={data.genre}/>
+            <Movie
+              title={data.title}
+              year={data.year}
+              poster={data.poster}
+              genre={data.genre}
+            />
           );
         })}
+        {/* <button onClick={handleClick}>Add Movie</button> */}
+        {/* <Counter/> */}
       </div>
+      <AddMovieForm onAddMovie={addMovie}/>
     </div>
   );
 };
