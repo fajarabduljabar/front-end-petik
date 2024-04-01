@@ -10,10 +10,18 @@ export const getMovieList = async () => {
   return movie.data.results;
 };
 
-export const getDetailMovie = async () => {
+export const getDetailMovie = async (id) => {
 
   const movie = await axios.get(
-    `https://api.themoviedb.org/3/movie/763215?${apikey}`
+    `https://api.themoviedb.org/3/movie/${id}?api_key=${apikey}`
+  );
+  return movie.data;
+};
+
+export const getTopRatedMovie = async () => {
+
+  const movie = await axios.get(
+    `https://api.themoviedb.org/3/movie/top_rated?api_key=${apikey}`
   );
   return movie.data.results;
 };

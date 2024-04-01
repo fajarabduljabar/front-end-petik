@@ -2,7 +2,7 @@
 .hero {
     display: flex;
     flex-direction: column;
-    text-align: center;
+
 }
 
 .hero-left {
@@ -17,7 +17,7 @@
 
 .hero-description {
     color: #64748b;
-    margin-bottom: 1rem;
+    margin-bottom: 15rem;
 }
 
 .hero-button {
@@ -29,10 +29,38 @@
     color: #fff;
 }
 
+button {
+    margin-top: 1rem;
+    padding-left: 2rem;
+    padding-right:  2rem;
+    margin-left:  6rem;
+    background-color: #5e7af5;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.hero-right {
+    margin-top: 0;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    box-shadow: 1px 1px black;
+    color: #fff;
+}
+
 .hero-image {
     max-width: 100%;
     height: auto;
     border-radius: 25px;    
+}
+
+/* Medium */
+@media (min-width: 768px) {
+    button {
+        margin-right: 20rem;
+    }
 }
 
 /* Large Screen */

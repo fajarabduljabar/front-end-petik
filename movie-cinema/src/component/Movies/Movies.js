@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import Movie from "../Movie/Movie.js";
 import "./Movies.css";
 import Counter from "../Counter/Counter.js";
 import AddMovieForm from "../AddMovieForm/AddMovieForm.js";
 import { getMovieList } from "../../Api.js";
+
 
 const Movies = () => {
 
