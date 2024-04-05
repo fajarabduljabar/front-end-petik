@@ -1,14 +1,17 @@
-import React from 'react'
+import React from 'react';
+
 
 const Footer = () => {
   return (
     <div>
-      <footer>
+      <footer className="footer">
+        <div class="content has-text-centered">
         <h3>Copyright &copy; 2024 Develoved by Fajar Abdul Jabar</h3>
-        <span>Make with &#10084;</span>
+        <p>Make with &#10084;</p>
+        </div>
       </footer>
     </div>
   )
 }
 
-export default Footer
+export default Footer;

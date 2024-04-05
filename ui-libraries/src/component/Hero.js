@@ -14,7 +14,7 @@ const Hero = () => {
             autem doloribus. Sequi quam vero laborum tempora, enim aut quae
             fugit.
           </p>
-          <Button>Primary</Button>
+          <Button className="button is-link mt-2">Primary</Button>
         </Col>
         <Col md={4}>
             <img src="https://picsum.photos/300/200" alt="hero-img"/>
