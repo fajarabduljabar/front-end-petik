@@ -37,10 +37,10 @@ function NavbarComponent(args) {
             </NavLink>
             <NavLink
               className="text-light mx-3"
-              to={"/top"}
+              to={"/courses"}
               style={{ textDecoration: "none" }}
             >
-              Top Rated
+              Courses
             </NavLink>
           </Nav>
           <NavLink to={"/login"}>

@@ -1,13 +1,15 @@
 import React from 'react'
-import DetailProduct from '../component/DetailProduct'
+// import DetailProduct from '../component/DetailProduct'
 import NavbarComponent from '../component/Navbar'
 import Footer from '../component/Footer'
+import DetailCourse from '../component/DetailCourse.js'
 
 const Detail = () => {
   return (
     <div>
         <NavbarComponent/>
-      <DetailProduct/>
+      {/* <DetailProduct/> */}
+      <DetailCourse/>
       <Footer/>
     </div>
   )
