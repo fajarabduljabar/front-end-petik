@@ -7,7 +7,11 @@ import Login from "./component/auth/Login.js";
 import Register from "./component/auth/Register.js";
 import Detail from "./pages/Detail.js";
 import Dashboard from "./pages/Dashboard.js";
-import DetailCourse from "./component/DetailCourse.js";
+// import DetailCourse from "./component/DetailCourse.js";
+import DetailCoursePage from "./pages/DetailCoursePage.js";
+import AddCourse from "./component/course/AddCourse.js";
+import TableCourse from "./component/course/TableCourse.js";
+import NotFound from "./component/NotFound.js";
 
 
 function App() {
@@ -21,7 +25,11 @@ function App() {
           <Route path="/register" element={<Register />}></Route>
           {/* <Route path="/detail" element={<Detail />}></Route> */}
           <Route path="/dashboard" element={<Dashboard/>}></Route>
-          <Route path="/course/:id" element={<DetailCourse/>}></Route>
+          {/* <Route path="/course/:id" element={<DetailCourse/>}></Route> */}
+          <Route path="/course/:id" element={<DetailCoursePage/>}></Route>
+          <Route path="/course/add" element={<AddCourse/>}></Route>
+          <Route path="/table-course" element={<TableCourse/>}></Route>
+          <Route path="/*" element={<NotFound/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

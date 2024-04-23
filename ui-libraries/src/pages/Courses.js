@@ -7,7 +7,6 @@ const TopRated = () => {
   return (
     <div>
       <NavbarComponent />
-      <h1>Courses</h1>
       <CourseCards />
       <Footer />
     </div>
