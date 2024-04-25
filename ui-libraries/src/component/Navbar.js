@@ -5,14 +5,26 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavbarText,
 } from "reactstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { reset } from './features/authSlice';
+import { LogOut } from './features/authSlice';
 
 function NavbarComponent(args) {
+
   const [isOpen, setIsOpen] = useState(false);
+  const dispatch = useDispatch();
+  const {user} = useSelector((state) => state.auth);
+  const navigate =useNavigate();
 
   const toggle = () => setIsOpen(!isOpen);
+
+  const logout = () => {
+    dispatch(LogOut());
+    dispatch(reset());
+    setIsOpen(false);
+  }
 
   return (
     <div>
@@ -43,9 +55,16 @@ function NavbarComponent(args) {
               Courses
             </NavLink>
           </Nav>
-          <NavLink to={"/login"}>
-          <button class="button is-light">Login</button>
-          </NavLink>
+          {
+            user? (
+              <button onClick={logout} className="button is-light">Logout</button>
+            ) : (
+              <NavLink to={"/login"}>
+              <button class="button is-light">Login</button>
+              </NavLink>
+            )
+          }
+         
         </Collapse>
       </Navbar>
     </div>
