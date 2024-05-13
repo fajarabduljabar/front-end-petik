@@ -1,28 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { NavLink } from "react-router-dom";
 
-import {
-  Card,
-  CardBody,
-  CardImg,
-  CardTitle,
-  CardText,
-  Row,
-} from 'reactstrap';
+import { Card, CardBody, CardImg, CardTitle, CardText, Row } from "reactstrap";
 
 const CoursesCard = () => {
-    
-   
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await axios.get('https://api.sukmax.my.id/course');
+        const response = await axios.get("https://api.sukmax.my.id/course");
         setCourses(response.data);
       } catch (error) {
-        console.error('Error fetching courses:', error);
+        console.error("Error fetching courses:", error);
       }
     };
 
@@ -38,12 +29,7 @@ const CoursesCard = () => {
           className="col-xs-6 col-sm-4 col-md-3"
         >
           <Card color="light" className="mb-4">
-            <CardImg
-              top
-              width="100%"
-              src={course.url}
-              alt={course.name}
-            />
+            <CardImg top width="100%" src={course.url} alt={course.name} />
             <CardBody className="text-center">
               <CardTitle tag="h5">{course.name}</CardTitle>
               <CardText>
